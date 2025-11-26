@@ -1,0 +1,37 @@
+[requires]
+
+Core dependencies for pod5-file-format
+
+Versions pinned for reproducibility (mimicking a lockfile)
+
+arrow/14.0.1
+boost/1.83.0
+zstd/1.5.5
+flatbuffers/23.5.26
+openssl/3.2.0
+
+Dependencies often required by Arrow/Boost
+
+gflags/2.2.2
+glog/0.6.0
+protobuf/3.21.12
+snappy/1.1.10
+lz4/1.9.4
+thrift/0.17.0
+xsimd/11.1.0
+
+[generators]
+cmake
+cmake_find_package
+
+[options]
+
+Common options required for pod5/arrow compatibility
+
+arrow:with_zstd=True
+arrow:with_lz4=True
+arrow:with_snappy=True
+arrow:with_flatbuffers=True
+arrow:with_boost=True
+arrow:compute=True
+arrow:filesystem_layer=True
