@@ -9,6 +9,8 @@
 #include <arrow/type.h>
 #include <arrow/util/compression.h>
 
+#include <iostream>
+
 namespace pod5 {
 
 ReadTableWriter::ReadTableWriter(
@@ -31,6 +33,8 @@ ReadTableWriter::ReadTableWriter(
     m_field_builders.get_builder(m_field_locations->pore_type).set_dict_writer(pore_writer);
     m_field_builders.get_builder(m_field_locations->end_reason).set_dict_writer(end_reason_writer);
     m_field_builders.get_builder(m_field_locations->run_info).set_dict_writer(run_info_writer);
+
+    std::cout << "Obvious debug code" << std::endl;
 }
 
 ReadTableWriter::ReadTableWriter(ReadTableWriter && other) = default;

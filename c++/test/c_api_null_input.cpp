@@ -31,7 +31,7 @@ constexpr std::size_t ptr_idx_to_arg_idx()
         }
     }
 
-    throw "Cannot find arg for ptr";
+    throw "Cannot find arg for pointer";
 }
 
 template <std::size_t PtrIdx, typename... Args>
